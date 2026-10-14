@@ -1,0 +1,405 @@
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 250px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.history-sidebar,
+.ban-sidebar {
+  background: #fff0f4;
+  padding: 35px 18px;
+  text-align: center;
+}
+
+.history-sidebar {
+  border-right: 2px dashed #f0c8d6;
+}
+
+.ban-sidebar {
+  border-left: 2px dashed #f0c8d6;
+}
+
+.history-sidebar h2,
+.ban-sidebar h2 {
+  font-size: 25px;
+  color: #ae6384;
+  margin-bottom: 12px;
+}
+
+.sidebar-subtitle {
+  color: #987588;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.history-item {
+  background: white;
+  padding: 12px;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px #d99bb333;
+  transition: transform 0.2s;
+}
+
+.history-item:hover {
+  transform: translateY(-3px);
+}
+
+.history-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.history-item p {
+  font-size: 14px;
+  color: #86566d;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.empty-message {
+  color: #ad8b9d;
+  font-size: 14px;
+}
+
+.main-content {
+  min-width: 0;
+  padding: 35px 25px 60px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 30%, #ffffff80 4px, transparent 5px),
+    radial-gradient(circle at 80% 70%, #ffffff80 4px, transparent 5px),
+    linear-gradient(145deg, #fffaf4, #fce9f2);
+  background-size: 85px 85px, 120px 120px, cover;
+}
+
+.app-header {
+  margin-bottom: 28px;
+}
+
+.header-decoration {
+  font-size: 22px;
+  margin-bottom: 12px;
+  letter-spacing: 7px;
+}
+
+.app-header h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 60px;
+  color: #b66b8c;
+  margin-bottom: 15px;
+}
+
+.app-header p {
+  color: #916b7f;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.header-tagline {
+  display: inline-block;
+  background: #fff;
+  color: #b17c95;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  box-shadow: 0 3px 10px #d99bb322;
+}
+
+.dog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.dog-card,
+.empty-dog-card {
+  background: #fffdfd;
+  border: 3px solid #f5d4e0;
+  border-radius: 28px;
+  padding: 28px;
+  width: min(100%, 580px);
+  box-shadow: 0 10px 30px #c98fa333;
+}
+
+.dog-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.dog-card-heading h2 {
+  font-family: 'Fredoka', sans-serif;
+  color: #a75d7d;
+  font-size: 30px;
+  margin: 0;
+}
+
+.little-heart {
+  color: #e7a0bb;
+  font-size: 30px;
+}
+
+.dog-image-container {
+  width: min(100%, 360px);
+  height: 290px;
+  margin: 0 auto 22px;
+  padding: 9px;
+  background: #fff1f6;
+  border: 2px solid #f5cddd;
+  border-radius: 20px;
+}
+
+.dog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 13px;
+}
+
+.attribute-hint {
+  color: #ad91a0;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.dog-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+}
+
+.detail-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.detail-group h3 {
+  color: #a76f88;
+  font-size: 15px;
+  margin: 0;
+}
+
+.temperament-group {
+  flex-basis: 100%;
+}
+
+.trait-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.attribute-button {
+  background: #f7d9e5;
+  color: #85536e;
+  border: 2px solid #efbdd1;
+  border-radius: 25px;
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.attribute-button:hover:not(:disabled) {
+  background: #e9a9c3;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px #d992ac66;
+}
+
+.attribute-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.discover-button {
+  background-color: #e9a9c3;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.discover-button:hover {
+  background-color: #d48ba8;
+}
+
+.discover-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #a65a80;
+}
+
+.empty-dog-card {
+  padding: 55px 20px;
+}
+
+.empty-dog-icon {
+  font-size: 85px;
+  margin-bottom: 18px;
+}
+
+.empty-dog-card h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 26px;
+  color: #ac6788;
+  margin-bottom: 12px;
+}
+
+.empty-dog-card p {
+  color: #967888;
+  margin-bottom: 20px;
+}
+
+.empty-dog-card span {
+  color: #d893af;
+  font-size: 24px;
+}
+
+.ban-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.ban-header span {
+  font-size: 35px;
+}
+
+.ban-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ban-button {
+  background: #e9adc2;
+  color: #793f5e;
+  border: none;
+  border-bottom: 4px solid #c17f9c;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  transition: all 0.2s;
+}
+
+.ban-button:hover {
+  background: #d785a6;
+  color: white;
+  transform: scale(1.04);
+}
+
+.empty-ban-list {
+  background: #fffafd;
+  border: 2px dashed #eec8d8;
+  border-radius: 20px;
+  padding: 24px 12px;
+}
+
+.empty-ban-list span {
+  font-size: 40px;
+}
+
+.empty-ban-list p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #ad8b9d;
+}
+
+.clear-button {
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: 2px solid #e3b2c6;
+  border-radius: 20px;
+  background: white;
+  color: #ac6f8c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background: #fce0eb;
+}
+
+@media (max-width: 1050px) {
+  .app-layout {
+    grid-template-columns: 180px minmax(0, 1fr) 190px;
+  }
+
+  .history-sidebar,
+  .ban-sidebar {
+    padding: 25px 12px;
+  }
+
+  .main-content {
+    padding: 30px 15px;
+  }
+
+  .dog-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    grid-row: 1;
+  }
+
+  .history-sidebar {
+    grid-row: 3;
+    border-right: none;
+    border-top: 2px dashed #f0c8d6;
+  }
+
+  .ban-sidebar {
+    grid-row: 2;
+    border-left: none;
+    border-top: 2px dashed #f0c8d6;
+  }
+
+  .history-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .history-sidebar h2,
+  .history-sidebar .sidebar-subtitle {
+    flex-basis: 100%;
+  }
+
+  .history-item {
+    width: 130px;
+  }
+
+  .dog-image-container {
+    height: 260px;
+  }
+}
